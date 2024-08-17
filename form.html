@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formu</title>
+    <script type="text/javascript" src="tienda_.js"></script>
+</head>
+<body>
+    <form name="Datos" action="mailto:darado80@gmail.com" method="post" enctype="text/plain" >
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label>Nombre:<br><input type="text" name="nombre" placeholder="Escribe aqui tu nombre"></label><br>
+            <label for="apellidose">Apellidos:<br><input type="text" name="apellidos" id="apellidose" placeholder="Escribe aqui tus apellidos"></label><br>
+            <label>Dirección:<br><input type="text" name="Dirección" placeholder="calle, número, puerta"></label><br>
+            <label>Correo electrónico<br><input type="mail" name="correo"></label><br>
+            <label>Edad<br><input type="number" min="0" max="99" name="edad"></label><br>
+            <p>Tipo de tarjeta:</p>
+            <input type="radio" name="tarjeta"><label>Master Card</label><br>
+            <input type="radio" name="tarjeta"><label>Visa</label><br>
+            <div class="ticket"></div>
+            <input type="submit" value="Enviar y Pagar">
+            
+
+
+        </fieldset>
+    </form>
+    
+</body>
+</html>
