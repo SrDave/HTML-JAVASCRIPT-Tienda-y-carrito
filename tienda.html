@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <style>
+        /* body{
+          background-image: url();     
+        } */
+        .col-8, .col-8 p,.col-8 h5,.col-8 button,.col-8 img{
+            display:grid;
+            justify-content:center;
+            grid-template-columns: auto auto auto;
+            place-items: center;
+            margin-bottom: 10px;
+            width: 80%;
+            align-items:center;
+            text-align: justify;
+            margin: 10px;
+        }
+        .col-8 p{
+            text-align: center;
+        }
+        .mx-5{
+            background-color: red;
+        }
+        .btn-primary{
+            background-color: rgb(49, 138, 255);
+            color: white;
+            margin-bottom: 20px;
+        }
+        .col-8 img{
+            width: 260px;
+            height: 240px;
+        }
+        aside{
+            text-align: left;
+            width: 17%;
+            right: 0;
+            top:0;
+            margin: 10px;
+            position:fixed;
+            z-index: 200;
+        }
+        .barra a{
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px 5px;
+            background-image: linear-gradient(to bottom,yellow,whitesmoke);
+            color: red;
+            
+        }
+        .barra{
+            text-align: center;
+        }
+        .gate{
+            width: 550px;
+            height: 500px;
+            z-index: 100;
+            position: absolute;
+            top: 360px;
+            left: 380px;   
+        }
+        
+        .menu a{
+            display: inline-block;
+            border-radius: 5px;
+            box-shadow: 5px 8px 12px black;
+            margin: 20px;
+            margin-top: 0%;
+            background-color: beige;
+            
+        }
+        .menu img~ p{
+            font-family: Pokemon;   
+        }
+                 
+        .gate:hover{
+            
+            transform-origin: 50% 50%;
+            transform-box: fill-box;
+            animation: translateBox 2s forwards;
+            animation-play-state: running;
+            
+        }
+        
+        
+        @keyframes Opacity{
+            0% {
+                opacity: 0;
+            }
+            50%{
+                opacity: 0.1;
+            }
+            95%{
+                opacity: 1;
+            }
+        }
+        @keyframes translateBox{
+            from {
+                transform: translateY(25px);
+            }
+            to {
+                transform: scale(-10%);
+            }
+           
+        }
+        @font-face{
+            font-family: Pokemon;
+            src: url("pruebas/font/PokemonSolid.ttf");
+        }
+        
+        
+    </style>
+    <script type="text/javascript" src="tienda_.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">AQUI HEADER LOGO</h1>
+    </header>
+    <nav>
+        <p style="text-align: center;">AQUI EL NAV</p>
+    </nav>
+    <div class="contenedor">
+        <div class="barra">
+            <a id="menu" href="javascript:miMenu()">Menú</a>
+            <a id="funkos" href="javascript:miFunkos()">Funkos</a>
+            <a id="mochilas" href="javascript:miMochila()">Mochilas</a>
+            <a id="tazas" href="javascript:miTaza()">Tazas</a>
+            <a id="videojuego" href="javascript:miVideojuego()">Videojuegos</a>
+        </div>
+        <div style="text-align: center;"><img class="store" src="img1/pokemon_store.png" alt="logo_tienda" width="330px" height="200px"></div>
+        <div class="col">
+            <main id="items" class="col-8"></main>
+            <aside class="col-4">
+                <h2>Carrito <img src="img/carrito.png" alt="carrito" width="25px" height="20px"></h2>
+                
+                <ul id="carrito" class="lista"></ul>
+                <hr>
+                <p class="texto-derecha">Total: <span id="total"></span>&euro;</p>
+                <button id="pagar" class="btn">Pagar</button>
+                <button id="vaciar" class="btn btn-danger">Limpiar</button>
+                
+            </aside>
+        </div>
+    </div>
+    <div class="menu" style="text-align: center;">
+        <a href="javascript:miFunkos()" id="img1"><img src="img1/Funko.jpg" alt="funkos" width="250" height="210"><p>FUNKOS</p></a>
+        <a href="javascript:miMochila()" id="img2"><img src="img1/mochilas_pokemon.jpg" alt="mochilas" width="250" height="210"><p>MOCHILAS</p></a><br>
+        <a href="javascript:miTaza()" id="img3"><img src="img1/tazas_pokemon.jpg" alt="tazas" width="250" height="210"><p>TAZAS</p></a>
+        <a href="javascript:miVideojuego()" id="img4"><img src="img1/videojuegos_pokemon.png" alt="videojuegos" width="250" height="210"><p>VIDEOJUEGOS</p></a>
+    </div>
+    <br>
+<footer>
+    <hr>
+    <p style="text-align: center;">AQUI EL FOOTER</p>
+</footer>
+
+</body>
+</html>
